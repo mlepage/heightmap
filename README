@@ -13,8 +13,8 @@ USAGE
 -- import module
 require "heightmap"
 
--- create 256x256 heightmap
-map = heightmap.create(256, 256)
+-- create 32x32 heightmap
+map = heightmap.create(32, 32)
 
 -- examine each height value
 for x = 0, map.w do
@@ -28,14 +28,16 @@ function f(map, x, y, d, h)
     return 2 * heightmap.defaultf(map, x, y, d, h)
 end
 
--- use it to create a new heightmap
-map = heightmap.create(256, 256, f)
+-- use it to create a larger non-square heightmap
+map = heightmap.create(100, 200, f)
 
 
 HOW IT WORKS
 
 The heightmap must be a square the size of a power of two, plus one, so that
 it can be evenly divided. For example, 4x4 cells will require 5x5 vertices.
+If another size is specified, a sufficiently large power of two square will
+be used, and the result clipped to the desired size.
 
 First the four corners are seeded with a random value (C).
 
