@@ -52,7 +52,7 @@ The square and diamond steps continue until all values have been set:
       4     S 2    D 2    S 1    D 1
     C...C  c...c  c.D.c  c.d.c  cDdDc
     .....  .....  .....  .S.S.  DsDsD
-    .....  ..S..  D.s.D  d.S.d  dDsDd
+    .....  ..S..  D.s.D  d.s.d  dDsDd
     .....  .....  .....  .S.S.  DsDsD
     C...C  c...c  c.D.c  c.d.c  cDdDc
 
