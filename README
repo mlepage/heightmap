@@ -18,7 +18,7 @@ map = heightmap.create(32, 32)
 
 -- examine each height value
 for x = 0, map.w do
-    for y = 0, map.y do
+    for y = 0, map.h do
         print(map[x][y])
     end
 end
